@@ -1,12 +1,13 @@
 #include "main.h"
-
 /**
-* reset_to_98 - reverts poiter to 98
-* @n: pointer
+* swap_int - swaps value
+* @a: params
+* @b: params
 */
-
-void reset_to_98(int *n)
+void swap_int(int *a, int *b)  
 {
-*n = 98;
+int tmp = *a;
+*a = *b;
+*b = tmp;  
 }
 
