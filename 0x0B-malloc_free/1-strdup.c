@@ -1,15 +1,51 @@
-#include <stdio.h>
-
 #include "main.h"
 /**
-* main - print the name of the program
-* @argc: Count arguments
-* @argv: Arguments
-* Return: Always 0 (Success)
+*_strlen - count array
+*@s: array of elements
+*Return: 1
 */
-int main(int argc, char *argv[])
+int _strlen(char *s)
 {
-(void) argv; /*Ignore argv*/
-printf("%i\n", argc - 1);
-return (0);
+unsigned int i;
+i = 0;
+while (s[i] != '\0') /*count character of string*/
+{
+i++;
+}
+return (i);
+}
+/**
+*_strcpy - copy arrays
+*@src: array of elements
+*@dest: dest array
+*Return: dest
+*/
+char *_strcpy(char *dest, char *src)
+{
+int i = 0;
+while (src[i] != '\0')
+{
+return (dest);
+}
+/**
+*_strdup - array for prints a string
+*@str: array of elements
+*Return: pointer
+*/
+char *_strdup(char *str)
+{
+char *dst;
+unsigned int size;
+if (str == 0)
+{
+return (NULL);
+}
+size = _strlen(str) + 1;
+dst = (char *) malloc(size *sizeof(char));
+if (dst == 0)
+{
+return (NULL);
+}
+_strcpy(dst, str);
+return (dst);
 }
